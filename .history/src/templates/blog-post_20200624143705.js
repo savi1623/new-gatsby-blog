@@ -1,0 +1,11 @@
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout.js"
+
+export default ({ data }) => {}
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } })
+  }
+`
